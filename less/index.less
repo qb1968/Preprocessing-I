@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background:red;
 }
 ol, ul {
 	list-style: none;
@@ -47,6 +48,17 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+@name: black;
+@text:font-family 'Roboto Mono', monospace;
+.my-class{
+	display: flex;
+	
+}
+.mob-class{
+	height:200px;
+	width: 80%;
+    background: green;
+}
 
 /* Set every element's box-sizing to border-box */
 * {
@@ -59,42 +71,102 @@ html, body {
 }
 
 header{
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	width: 100%;
+	 display: flex;
+	 justify-content: space-evenly;
+	 align-items: center;
+	width: 75%;
 	height:75px;
+	margin: auto;
 	padding: 20px;
-	background:red;
+	background:gray;
+	font-family: @text;
+	 nav a{
+	font-size: 30px;
+	color:@name;
+
+
+
  
 }
-	
-
-.container{	
-height:700px;
-	width:100%;
-	border:2px solid black;
-	margin: auto;
-	padding: 20px;;
-	margin-top:2%;
 }
 
-header nav a{
-	font-size: 20px;
-	color: black;
-}	
 h1{
 	display: flex;
 	height: 100px;
-width:50%;
+    width:100%;
 	align-items: center;
 	font-family:'Monofett', cursive;
 	font-size: 55px;
 }
-.top{
+
+.container{	
+	 display: flex;
+	flex-flow: column;
+	 justify-content:space-around;
+	 align-items: center;
+     height:600px;
+	width:75%;
+	margin: auto;
+	padding: 35px;;
+	background: lightgray;
+	
+	.top{
 	height:50px;
-}
-.middle{
-	height:100px;
+	width:100%;
+	.text{
+	text-align: center;
+	font-size:35px;
+	margin-bottom: 2%;
+	h2{
+	font-size: 30px;
+	font-weight: bold;
+	}
+ .text2{
+	font-size: 35px;	
+  }	
+  }  
+  }
 }
 
+.pic{
+	height:200px;
+	width:1000px;
+
+}
+.bottom-cont{
+	 .my-class();
+	flex-direction: row;
+	justify-content: space-evenly;
+	height:300px;
+	width:75%;
+	padding:20px;
+	font-size: 25px;
+	margin:auto;
+	background: gray;
+}
+
+footer{
+	height:100px;
+	width:100%;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	margin: auto;
+}
+
+
+@media(max-width: 500px){
+ .mob-class{
+	 width:100%;
+	 
+ }
+ .pic{
+	 display: none;
+ }
+ .text{
+	 font-size: 25px;
+ }
+ .container{
+	 height:800px;
+	}
+ }
