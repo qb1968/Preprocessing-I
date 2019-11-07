@@ -131,9 +131,8 @@ table {
   display: flex;
 }
 .mob-class {
-  height: 200px;
-  width: 80%;
-  background: green;
+  width: 500px;
+  background: gray;
 }
 /* Set every element's box-sizing to border-box */
 * {
@@ -186,12 +185,13 @@ h1 {
   font-size: 35px;
   margin-bottom: 2%;
 }
-.container .top .text h2 {
+h2 {
   font-size: 30px;
   font-weight: bold;
 }
-.container .top .text .text2 {
-  font-size: 35px;
+.text2 {
+  font-size: 25px;
+  height: 100px;
 }
 .pic {
   height: 200px;
@@ -199,34 +199,59 @@ h1 {
 }
 .bottom-cont {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
-  height: 300px;
+  height: 600px;
   width: 75%;
   padding: 20px;
   font-size: 25px;
   margin: auto;
   background: gray;
 }
+.Years,
+.Company,
+.Title {
+  display: flex;
+  justify-content: flex-start;
+  height: 100px;
+  width: 75%;
+  margin: auto;
+  text-align: center;
+  border: 1px solid black;
+}
+h3 {
+  text-align: center;
+  height: 100px;
+  width: 75%;
+  margin: auto;
+  border: 1px solid black;
+}
+.contact {
+  font-size: 25px;
+  font-weight: bold;
+}
 footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100px;
   width: 100%;
-  text-align: center;
   font-size: 20px;
   font-weight: bold;
   margin: auto;
 }
 @media (max-width: 500px) {
-  .mob-class {
-    width: 100%;
+  body {
+    width: 500px;
+    background: gray;
   }
-  .pic {
-    display: none;
-  }
-  .text {
-    font-size: 25px;
-  }
-  .container {
-    height: 800px;
-  }
+}
+.pic {
+  display: none;
+}
+.text {
+  font-size: 25px;
+}
+.container {
+  height: 800px;
 }
